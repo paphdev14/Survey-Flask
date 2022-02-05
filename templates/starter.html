@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Survey{% endblock %}
+
+{% block content %}
+
+<!-- Survey Title -->
+<header class="header">
+    <h1>{{survey.title}}</h1>
+    <p><b>Instructions:</b> {{survey.instructions}}</p>
+</header>
+
+<form action="/begin" method="POST" id="survey-form">
+    <!-- <input type="text" placeholder="Enter your name" name="username" id="username" autocomplete="off"> -->
+    <button id="btn">Start Survey</button>
+</form>
+
+{% endblock %}
